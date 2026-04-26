@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produktif AI - Asisten Produktivitas Pribadi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <h2>📊 Produktif AI</h2>
+          <p>Asisten Produktivitas Anda</p>
+        </div>
+
+        <!-- Statistik Cepat -->
+        <div class="stats-panel">
+          <div class="stat-item">
+            <span class="stat-label">📋 Tugas</span>
+            <span class="stat-value" id="task-count">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">🎯 Target</span>
+            <span class="stat-value" id="focus-goal">-</span>
+          </div>
+        </div>
+
+        <!-- Aksi Cepat -->
+        <div class="quick-actions">
+          <button class="action-btn" id="add-task-btn">➕ Tambah Tugas</button>
+          <button class="action-btn" id="set-focus-btn">🎯 Set Target</button>
+          <button class="action-btn" id="daily-plan-btn">
+            📅 Buat Rencana
+          </button>
+        </div>
+
+        <!-- Daftar Tugas Aktif -->
+        <div class="tasks-section">
+          <h3>⚡ Aktif Sekarang</h3>
+          <div id="tasks-list" class="tasks-list"></div>
+        </div>
+      </div>
+
+      <!-- MAIN CHAT -->
+      <div class="chat-container">
+        <div class="chat-header">
+          <h1>🚀 Produktif AI</h1>
+          <p class="subtitle">Asisten Produktivitas Pribadi Anda</p>
+        </div>
+
+        <div id="chat-box" class="chat-box"></div>
+
+        <div id="suggestions" class="suggestions-container"></div>
+
+        <form id="chat-form" class="chat-input-form">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Tanya bantuan tentang tugas, target, atau produktivitas..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="send-btn">📤 Kirim</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal Input Cepat -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <input type="text" id="modal-input" placeholder="Ketik di sini..." />
+        <button id="modal-confirm" class="modal-btn">Konfirmasi</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
